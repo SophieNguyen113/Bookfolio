@@ -1,4 +1,5 @@
-export default function Homepage() {
+export default function Homepage({user, api_url}) {
+  const AUTH_URL_LOGIN = `${api_url}/auth/github`;
   return (
     <div className="min-h-screen">
 
@@ -7,7 +8,12 @@ export default function Homepage() {
         <h1 className="text-5xl font-bold mb-4">Track, Record, and Share</h1>
         <p className="text-lg text-white-600 mb-8">Discover, record, and manage your favorite books with Bookfolio</p>
         <button className="group relative overflow-hidden px-10 py-3 mt-5 text-2xl font-bold cursor-pointer bg-white-600 text-white rounded-md outline-offset-4 hover:animate-[rotate-bounce_1s_infinite_ease-in-out]">
-          <span className="relative">Join Now</span>
+          <a
+            href={AUTH_URL_LOGIN}
+            className="relative cursor-pointer no-underline font-bold border-white-600 border p-2 rounded-xl"
+          >
+            Join Now
+          </a>
         </button>
       </section>
       

@@ -44,7 +44,8 @@ export default function Categories() {
               color: selectedCategory === category ? "white" : "black",
               backgroundColor: selectedCategory === category ? "black" : "white",
               "&:hover": {
-                backgroundColor: selectedCategory === category ? "grey.700" : "grey.300",
+                backgroundColor: selectedCategory === category ? "white" : "black",
+                color: selectedCategory === category ? "black" : "white",
               },
               "&.MuiButton-root": {
                 outline: "none",
@@ -61,7 +62,7 @@ export default function Categories() {
             No books available
           </Box>
         ) : (
-          <Box textAlign="center" color="black">
+          <Box className="text-center text-white font-semibold">
             {filteredGoogleBooks.length} books found
           </Box>
         )}

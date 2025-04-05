@@ -13,3 +13,4 @@ export default function Header({user, api_url}) {
     </header>
   );
 }
+

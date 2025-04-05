@@ -34,7 +34,7 @@ export default function GoogleBooks({api_url}) {
   if (errorMsg) return <h3>{errorMsg}</h3>;
 
   return (
-    <ul className="grid grid-cols-4 gap-4">
+    <ul className="grid grid-cols-4 gap-2">
       {(selectedCategory ? filteredGoogleBooks : googleBooks).map((book) => (
         <li key={book.id} style={{listStyle: 'None'}}>
           <GoogleBook book={book} api_url={api_url}/>

@@ -75,27 +75,27 @@ export default function GoogleBook({ book, api_url }) {
         <img
           src={book?.volumeInfo?.imageLinks?.thumbnail || "/placeholder.png"}
           alt={book?.volumeInfo?.title || "Book Cover"}
-          className="rounded-md max-h-48 object-cover"
+          className="rounded-2xl max-h-48 object-cover"
         />
       </figure>
       <div style={{ flexGrow: 1 }}>
-        <h3 className="font-bold text-lg mb-2">{book?.volumeInfo?.title || "Unknown"}</h3>
-        <p className="text-sm text-gray-600 mb-1">
+        <h3 className="font-bold text-lg mb-2 text-black">{book?.volumeInfo?.title || "Unknown"}</h3>
+        <p className="text-sm text-black mb-1">
           <strong>Authors:</strong>{" "}
           {book?.volumeInfo?.authors?.join(", ") || "Unknown"}
         </p>
-        <p className="text-sm text-gray-600 mb-1">
+        <p className="text-sm text-black mb-1">
           <strong>Published Date:</strong>{" "}
           {book?.volumeInfo?.publishedDate || "N/A"}
         </p>
-        <p className="text-sm text-gray-600 mb-1">
+        <p className="text-sm text-black mb-1">
           <strong>Pages:</strong> {book?.volumeInfo?.pageCount || "N/A"}
         </p>
-        <p className="text-sm text-gray-600 mb-1">
+        <p className="text-sm text-black mb-1">
           <strong>Language:</strong> {languageName || "Loading..."}
         </p>
         <p
-          className="text-sm text-gray-600 mb-2 truncate-lines"
+          className="text-sm text-black mb-2 truncate-lines"
           style={{
             display: "-webkit-box",
             WebkitBoxOrient: "vertical",
@@ -106,14 +106,14 @@ export default function GoogleBook({ book, api_url }) {
           <strong>Description:</strong>{" "}
           {book?.volumeInfo?.description || "No description available"}
         </p>
-        <p className="text-sm text-gray-600 mb-2">
+        <p className="text-sm text-black mb-2">
           <strong>Categories:</strong>{" "}
           {book?.volumeInfo?.categories?.join(", ") || "Uncategorized"}
         </p>
       </div>
       <button
         onClick={toggleSaveBook}
-        className="self-start px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition-colors"
+        className="self-start text-black font-semibold px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition-colors"
         style={{
           marginTop: "10px",
         }}

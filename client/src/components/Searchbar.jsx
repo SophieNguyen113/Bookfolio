@@ -19,30 +19,17 @@ export default function Searchbar({ children }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col items-center gap-2"
-      style={{ marginBottom: "10px" }}
+      className="flex flex-col items-center gap-2 mb-3"
     >
       <label
-        className="input input-bordered flex items-center gap-2"
-        style={{
-          width: "50%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "10px",
-        }}
+        className="input input-bordered flex items-center gap-2 w-1/2 justify-center p-3"
       >
         <input
           type="text"
-          className="grow"
+          className="grow w-full p-3 rounded"
           placeholder={children}
           value={search}
           onChange={handleChange}
-          style={{
-            width: "100%",
-            padding: "10px",
-            borderRadius: "4px",
-          }}
         />
         <button type="submit" className="p-2 bg-transparent" style={{ marginLeft: "10px" }}>
         <svg

@@ -4,10 +4,10 @@ import Searchbar from "../components/Searchbar";
 
 export default function Search({api_url}) {
   return (
-    <div style={{paddingTop:'20px'}}>
+    <div className="pt-5 font-bold">
       <Searchbar>Searching title...</Searchbar>
       <Categories />
-      <div className="flex">
+      <div className="flex font-semibold">
         <GoogleBooks api_url={api_url}/>
       </div>
     </div>

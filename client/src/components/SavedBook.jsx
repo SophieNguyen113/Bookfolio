@@ -145,19 +145,19 @@ export default function SavedBook({ savedBook, api_url }) {
       </figure>
       <div style={{ flexGrow: 1 }}>
         <h3 className="font-bold text-lg mb-2">{title}</h3>
-        <p className="text-sm text-gray-600 mb-1">
+        <p className="text-sm text-black font-bold mb-1">
           <strong>Authors:</strong> {authors || "Unknown"}
         </p>
-        <p className="text-sm text-gray-600 mb-1">
+        <p className="text-sm text-black font-bold mb-1">
           <strong>Pages:</strong> {pagecount || "N/A"}
         </p>
-        <p className="text-sm text-gray-600 mb-1">
+        <p className="text-sm text-black font-bold mb-1">
           <strong>Language:</strong> {languageName || "Loading..."}
         </p>
         <p
-          className="text-sm text-gray-600 mb-2 truncate-lines"
+          className="text-sm text-black font-bold mb-2 truncate-lines"
           style={{
-            display: "-webkit-box",
+            display: "-webkit-box", 
             WebkitBoxOrient: "vertical",
             overflow: "hidden",
             WebkitLineClamp: 2,
@@ -165,18 +165,16 @@ export default function SavedBook({ savedBook, api_url }) {
         >
           <strong>Description:</strong> {description || "No description available"}
         </p>
-        <p className="text-sm text-gray-600 mb-2">
+        <p className="text-sm text-black font-bold mb-2">
           <strong>Categories:</strong> {categories.join(", ") || "Uncategorized"}
         </p>
       </div>
       <button
         onClick={removeSavedBook}
-        className="self-start px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition-colors"
-        style={{
-          marginTop: "10px",
-        }}
+        className="group py-2 bg-blue-600 text-white rounded transition-all duration-300"
       >
-        ❤️ Saved - Click to Unsaved
+         <span className="group-hover:hidden transition-opacity duration-300">❤️ Save</span>
+         <span className="hidden group-hover:inline transition-opacity duration-300">🤍 Unsave?</span>
       </button>
       <div style={sliderStyles.container}>
         <div style={sliderStyles.label}>{pagesRead}</div>
